@@ -1,6 +1,6 @@
 .PHONY: deps
 
-ECR = 338791806049.dkr.ecr.eu-west-1.amazonaws.com/jan-summer-school-2023
+ECR = 338791806049.dkr.ecr.eu-west-1.amazonaws.com/jan-winter-school-2024
 DAGS = s3://dataminded-academy-capstone-resources/dags
 IMAGE = capstone
 

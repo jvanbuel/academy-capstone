@@ -26,18 +26,19 @@ def get_snowflake_credentials():
     return json.loads(secret["SecretString"])
 
 
-def get_spark_session(name: str = None) -> SparkSession:
+def get_spark_session(name: str | None = None) -> SparkSession:
     return (
-        SparkSession.builder.config(
-            "spark.jars.packages",
-            ",".join(
-                [
-                    "org.apache.hadoop:hadoop-aws:3.3.6",
-                    "net.snowflake:spark-snowflake_2.12:2.12.0-spark_3.4",
-                    "net.snowflake:snowflake-jdbc:3.14.1",
-                ]
-            ),
-        )
+        SparkSession.builder
+        # .config(
+        #     "spark.jars.packages",
+        #     ",".join(
+        #         [
+        #             "org.apache.hadoop:hadoop-aws:3.3.6",
+        #             "net.snowflake:spark-snowflake_2.12:2.12.0-spark_3.4",
+        #             "net.snowflake:snowflake-jdbc:3.14.1",
+        #         ]
+        #     ),
+        # )
         .config(
             "fs.s3a.aws.credentials.provider",
             "com.amazonaws.auth.DefaultAWSCredentialsProviderChain",
