@@ -1,0 +1,15 @@
+docker:
+    path: .
+id: 6f5ba8bb-b806-444c-ac3d-2584cf34c621
+ide:
+    filename: ide.yaml
+name: capstone-jan
+resources:
+    path: resources
+streaming:
+    filename: streaming.yaml
+template: ""
+version: "0.3"
+workflows:
+    path: dags
+    version: "2"
